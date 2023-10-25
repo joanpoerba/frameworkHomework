@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\WargaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/warga', [WargaController::class, 'index']);
+Route::get('/create', [WargaController::class, 'create']);
+Route::post('/warga/store', [WargaController::class, 'store']);
